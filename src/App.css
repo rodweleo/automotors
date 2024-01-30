@@ -1,0 +1,68 @@
+header{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+  z-index: 9999;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header nav a{
+  text-decoration: none;
+  color: lightgrey;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  transition: 0.25s ease-in-out;
+}
+
+header nav a.active{
+  background-color: white;
+  color: #152238;
+  border-radius: 50px;
+  padding: 7.5px 15px;
+}
+header ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header ul li:first-child{
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.popular-car-card{
+  width: 250px;
+  height: fit-content;
+}
+
+.popular-car-card img{
+  object-fit: fill;
+  border-bottom: 1px solid black;
+}
+
+
+.car-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  height: fit-content;
+  border-bottom: 1px solid lightgray;
+}

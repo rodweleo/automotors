@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body{
+    background-color: #152238;
+    height: 100vh;
+    margin: 0;
+}
+
+main{
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    z-index: -1;
+}
+
+select{
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+    border: 0;
+}
+
+
+.btn-primary{
+    padding: 10px 20px;
+    background-color: #152238;
+    color: white;
+}
