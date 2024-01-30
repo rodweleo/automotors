@@ -1,19 +1,5 @@
 export const Filter = () => {
-  // Add event listeners to handle the toggle behavior
-  document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-    radio.addEventListener("change", () => {
-      // Uncheck all other radios with the same name
-      document
-        .querySelectorAll(`input[name="${radio.name}"]`)
-        .forEach((otherRadio) => {
-          otherRadio.checked = false;
-        });
-
-      // Check the selected radio
-      radio.checked = true;
-    });
-  });
-
+  
   return (
     <section className="w-1/5 space-y-3 bg-white divide-y h-full overflow-scroll">
       <p className="flex justify-between ">
