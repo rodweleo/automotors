@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { Select } from "../ui/select";
 import { SelectOption } from "../ui/select/select_option";
+import { Button } from "../ui/button";
 
 export const Header = () => {
+  const carModels = ['Any','Audi','Aston Martin', 'Bentley'];
+  const carBrands = ['Any','BMW','Maxda', 'Honda'];
   const [carBrand, setCarBrand] = useState("");
   const [carModel, setCarModel] = useState("");
 
   return (
-    <section className="car-header">
+    <form className="flex items-center justify-center space-x-5">
       <Select options={{ label: "CAR BRAND", defaultValue:carBrand }}>
-        {['BMW','Maxda', 'Honda'].sort().map((carBrand) => (
+        {carBrands.sort().map((carBrand) => (
           <SelectOption
           options={{
             label: carBrand,
@@ -21,7 +24,7 @@ export const Header = () => {
       </Select>
 
       <Select options={{ label: "CAR MODEL", defaultValue:carModel }}>
-        {['Audi','Aston Martin', 'Bentley'].sort().map((carModel) => (
+        {carModels.sort().map((carModel) => (
           <SelectOption
           options={{
             label: carModel,
@@ -32,9 +35,8 @@ export const Header = () => {
         ))}
       </Select>
 
-      <button type="submit" className="btn-primary">
-        <i className="fa-solid fa-search"></i> Search
-      </button>
-    </section>
+      <Button options={{ className: "rounded-3xl bg-[#152238] text-white px-5 py-2.5 cursor-pointer", label: 'Search', leadingIcon: 'fa-solid fa-search'}}/> 
+      
+    </form>
   );
 };

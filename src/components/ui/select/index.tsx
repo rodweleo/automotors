@@ -3,6 +3,7 @@ import { ReactNode, useState } from "react";
 interface OptionsType {
   label?: string | number;
   defaultValue?: string | number 
+  name? : string | number
 }
 
 interface SelectProps {
@@ -20,12 +21,12 @@ export const Select: React.FC<SelectProps> = ({ children, options }) => {
   return (
     <label
       htmlFor="car-brand"
-      className="p-2 rounded-md w-1/5 space-y-2 relative"
+      className="p-2 rounded-md w-1/5 space-y-2 relative border border-slate-200"
     >
       <h4 className="text-sm">{options?.label}</h4>{" "}
       <p
         className={`cursor-pointer flex items-center justify-between ${
-          showOptions ? "bg-slate-400" : "bg-slate-300"
+          showOptions ? "bg-slate-300" : "bg-slate-200"
         } px-2.5 py-3 rounded-md`}
         onClick={() => toggleSelectOptions()}
       >
